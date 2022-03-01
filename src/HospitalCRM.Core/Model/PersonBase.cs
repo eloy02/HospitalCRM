@@ -1,6 +1,6 @@
 namespace HospitalCRM.Core.Model;
 
-public class PersonBase
+public interface IPersonBase
 {
     /// <summary>
     ///     Имя
@@ -16,9 +16,9 @@ public class PersonBase
     ///     Отчество
     /// </summary>
     public string PatronymicName { get; set; }
-
+    
     /// <summary>
     ///     ФИО
     /// </summary>
-    public string FullName => $"{LastName} {FirstName} {PatronymicName}";
+    public string FullName { get; }
 }
