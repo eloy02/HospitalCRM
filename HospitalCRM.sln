@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalCRM.Core", "src\Hos
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{0A0FB5E8-6A5D-457D-9501-EB02F4480A14}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalCRM.PacientsService", "src\HospitalCRM.PacientsService\HospitalCRM.PacientsService.csproj", "{CE0D9C06-6414-4282-910C-27A168B0BF1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{B86B714D-0B03-4559-B5B1-0E053F0471CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B86B714D-0B03-4559-B5B1-0E053F0471CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B86B714D-0B03-4559-B5B1-0E053F0471CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE0D9C06-6414-4282-910C-27A168B0BF1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE0D9C06-6414-4282-910C-27A168B0BF1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE0D9C06-6414-4282-910C-27A168B0BF1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE0D9C06-6414-4282-910C-27A168B0BF1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{141D1BD7-2712-4D1D-8422-200EA9159135} = {0A0FB5E8-6A5D-457D-9501-EB02F4480A14}
