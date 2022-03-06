@@ -1,7 +1,7 @@
 using HospitalCRM.Core.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace HospitalCRM.Backend.DataAccess;
+namespace HospitalCRM.Backend.Core.Database;
 
 public class DataContext : DbContext
 {
