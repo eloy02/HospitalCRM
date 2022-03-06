@@ -41,5 +41,7 @@ public sealed class Pacient : IPersonBase
     [ProtoMember(12)]
     public List<PacientDocument> Documents { get; set; }
 
+    [ProtoMember(13)] public List<PacientVisit> Visits { get; set; }
+
     public string FullName => $"{LastName} {FirstName} {PatronymicName}";
 }

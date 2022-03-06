@@ -27,11 +27,13 @@ public sealed class User : IPersonBase
     public string Password { get; set; }
     public string FullName => $"{LastName} {FirstName} {PatronymicName}";
 }
-[ProtoContract()]
+
+[ProtoContract]
 public enum UserType
 {
-    [ProtoEnum()]
-    Hospital = 1,
-    [ProtoEnum()]
-    RehabilitationCenter = 2
+    [ProtoEnum] Hospital = 1,
+
+    [ProtoEnum] RehabilitationCenter = 2,
+
+    [ProtoEnum] Administrator = 3
 }

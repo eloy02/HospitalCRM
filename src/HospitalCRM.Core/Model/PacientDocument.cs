@@ -13,4 +13,6 @@ public sealed class PacientDocument
     
     [ProtoMember(3)]
     public byte[] Data { get; set; }
+
+    [ProtoMember(4)] public Pacient Pacient { get; set; }
 }

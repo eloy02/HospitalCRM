@@ -10,4 +10,6 @@ public sealed class DoctorPosition
     
     [ProtoMember(2)]
     public string Name { get; set; }
+
+    public List<Doctor> Doctors { get; set; }
 }

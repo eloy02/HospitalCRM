@@ -22,7 +22,10 @@ public sealed class Doctor : IPersonBase
     
     [ProtoMember(6)]
     public bool IsActive { get; set; }
-    
-    [ProtoMember(7)]
-    public string FullName { get; }
+
+    public string FullName => $"{LastName} {FirstName} {PatronymicName}";
+
+    [ProtoMember(7)] public long PositionId { get; set; }
+
+    [ProtoMember(8)] public List<PacientVisit> PacientVisits { get; set; }
 }
