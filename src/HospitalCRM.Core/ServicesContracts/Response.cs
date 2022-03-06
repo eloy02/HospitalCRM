@@ -1,6 +1,7 @@
+using HospitalCRM.Core.Model;
 using ProtoBuf;
 
-namespace HospitalCRM.Core.Model;
+namespace HospitalCRM.Core.ServicesContracts;
 
 [ProtoContract]
 public class Response<T> where T : class

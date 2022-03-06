@@ -1,9 +1,10 @@
+using MediatR;
 using ProtoBuf;
 
-namespace HospitalCRM.Core.Model;
+namespace HospitalCRM.Core.ServicesContracts;
 
 [ProtoContract]
-public sealed class Request<T> where T : class
+public sealed class Request<T> where T : IBaseRequest
 {
     public static Request<T> Create(T data, string jwt)
     {
