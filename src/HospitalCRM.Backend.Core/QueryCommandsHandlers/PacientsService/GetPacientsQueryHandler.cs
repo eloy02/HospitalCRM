@@ -29,6 +29,6 @@ public sealed class GetPacientsQueryHandler : QueryCommandsHandlerBase,
         if (!string.IsNullOrWhiteSpace(request.FioSearch))
             loop = loop.Where(x => x.FullName.ToLower().Contains(request.FioSearch.ToLower()));
 
-        return await pacientsQuery.ToListAsync(cancellationToken);
+        return await loop.ToListAsync(cancellationToken);
     }
 }

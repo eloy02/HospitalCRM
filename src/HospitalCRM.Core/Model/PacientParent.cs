@@ -18,7 +18,7 @@ public sealed class PacientParent : IPersonBase
     public string LastName { get; set; }
     
     [ProtoMember(5)]
-    public string PatronymicName { get; set; }
+    public string? PatronymicName { get; set; }
     
     [ProtoMember(6)]
     public string PhoneNumber { get; set; }

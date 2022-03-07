@@ -15,7 +15,7 @@ public sealed class Pacient : IPersonBase
     public string LastName { get; set; }
     
     [ProtoMember(4)]
-    public string PatronymicName { get; set; }
+    public string? PatronymicName { get; set; }
     
     [ProtoMember(5)]
     public string City { get; set; }
@@ -27,7 +27,7 @@ public sealed class Pacient : IPersonBase
     public string BuildingNumber { get; set; }
     
     [ProtoMember(8)]
-    public string FlatNumber { get; set; }
+    public string? FlatNumber { get; set; }
     
     [ProtoMember(9)]
     public string PhoneNumber { get; set; }

@@ -25,9 +25,13 @@ public class DataContext : DbContext
             e.ToTable(nameof(Doctors));
 
             e.HasKey(x => x.Id);
+            
+            e.Property(x => x.Id).ValueGeneratedOnAdd();
 
             e.HasOne(x => x.Position)
                 .WithMany(p => p.Doctors);
+
+            e.Ignore(x => x.FullName);
         });
 
         modelBuilder.Entity<DoctorPosition>(e =>
@@ -35,6 +39,8 @@ public class DataContext : DbContext
             e.ToTable(nameof(DoctorsPositions));
 
             e.HasKey(x => x.Id);
+            
+            e.Property(x => x.Id).ValueGeneratedOnAdd();
         });
 
         modelBuilder.Entity<Pacient>(e =>
@@ -42,12 +48,16 @@ public class DataContext : DbContext
             e.ToTable(nameof(Pacients));
 
             e.HasKey(x => x.Id);
+            
+            e.Property(x => x.Id).ValueGeneratedOnAdd();
 
             e.HasMany(x => x.Parents)
                 .WithOne(p => p.Pacient);
 
             e.HasMany(x => x.Documents)
                 .WithOne(d => d.Pacient);
+
+            e.Ignore(x => x.FullName);
         });
 
         modelBuilder.Entity<PacientDocument>(e =>
@@ -55,13 +65,19 @@ public class DataContext : DbContext
             e.ToTable(nameof(PacientDocument));
 
             e.HasKey(x => x.Id);
+            
+            e.Property(x => x.Id).ValueGeneratedOnAdd();
         });
 
         modelBuilder.Entity<PacientParent>(e =>
         {
             e.ToTable(nameof(PacientParents));
-
+            
             e.HasKey(x => x.Id);
+            
+            e.Property(x => x.Id).ValueGeneratedOnAdd();
+
+            e.Ignore(x => x.FullName);
         });
 
         modelBuilder.Entity<PacientVisit>(e =>
@@ -69,6 +85,8 @@ public class DataContext : DbContext
             e.ToTable(nameof(PacientVisits));
 
             e.HasKey(x => x.Id);
+            
+            e.Property(x => x.Id).ValueGeneratedOnAdd();
 
             e.HasOne(x => x.Pacient)
                 .WithMany(x => x.Visits);
@@ -82,6 +100,10 @@ public class DataContext : DbContext
             e.ToTable(nameof(Users));
 
             e.HasKey(x => x.Id);
+            
+            e.Property(x => x.Id).ValueGeneratedOnAdd();
+
+            e.Ignore(x => x.FullName);
         });
     }
 }
